@@ -1,0 +1,5 @@
+node_modules
+
+stress-test/gatling-charts-highcharts-bundle-3.9.5
+
+stress-test/user-files/results/rinhabackendsimulation-*

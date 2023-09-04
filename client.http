@@ -1,0 +1,23 @@
+@base = http://127.0.0.1:3333
+
+# @name create_person
+POST {{base}}/pessoas
+
+{
+  "apelido" : "josé",
+  "nome" : "José Roberto",
+  "nascimento" : "2000-10-01",
+  "stack" : ["C#", "Node"]
+}
+
+###
+# @name person_id
+GET {{base}}/pessoas/{{create_person.response.body.id}}
+
+###
+# @name search
+GET {{base}}/pessoas?t=josé
+
+###
+# @name count
+GET {{base}}/contagem-pessoas
